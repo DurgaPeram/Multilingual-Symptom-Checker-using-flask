@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 125px;
+    background-color: #2b88d8;
+    color: white;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+}
+.re {
+    width: 100px;
+    height: auto;
+    margin-left: 15px;
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    border-radius: 5%;
+}
+.rr {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+    position: absolute;
+    top: 33px;
+    left: 80px;
+    border-radius: 7%;
+}
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #023a5a;
+    color: white;
+    height: 40px;
+}
+
+nav ul
+{
+    display:block;
+    block-size: 30px;
+    font-size: 15px;
+    color: white;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+nav ul li:hover
+    {
+       background-color: #ce99ff;
+       background-size: 30px;
+       padding-top: 6px;
+    }
+nav ul li:active
+    {
+        background-color: #2b88d8;
+    }
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+}
+.feedback-section {
+    max-width: 600px;
+    margin: 0 auto; /* Center the feedback form */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section h2 {
+    text-align: center; /* Center the heading */
+    color: #2b88d8; /* Use the primary color */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin: 10px 0 5px; /* Space above and below labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding for comfort */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below input fields */
+}
+
+button {
+    background-color: #2b88d8; /* Primary color for button */
+    color: #fff; /* White text */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+    width: 100%; /* Full width for button */
+}
+
+button:hover {
+    background-color: #1d5e8c; /* Darker shade on hover */
+}
+
+#feedback-response {
+    text-align: center; /* Center the response text */
+    color: green; /* Green color for success message */
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2b88d8;
+    color: #fff;
+    margin-top: 2rem;
+}

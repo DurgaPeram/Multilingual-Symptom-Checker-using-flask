@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  style="width=device-width, initial-scale=1.0">
+    <meta lang="UTF-8">
+
+    <title>Document</title>
+    <style>
+        
+	* {
+  	box-sizing: border-box;
+	}
+	.container{
+            /* text-align: center;
+            display: flex; */
+            justify-content: center;
+            align-items: center; 
+             justify-content: center;
+            align-items: center;
+            text-align: center;
+	   background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+            background-size:100% 100%;
+	    border:2px solid black;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 100vh;
+        }
+        .content{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding:50px;
+        }
+        .container h1{
+            position: absolute;
+            top:5%;
+            color:darkblack;
+ 		text-shadow: 4px 4px 10px white;
+		font-size: 50px;
+            text-transform: capitalize;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .content input{
+            width: 300px;
+            height: 40px;
+            font-size: 20px;
+        }
+        .content label{
+		color: darkblack;
+		font-size: 20px;
+		 text-shadow: 2px 2px 4px white;
+        }
+	
+ @media only screen and (max-width: 620px) {
+ 	 .menu, .main, .right {
+   	 width: 100%;
+  	}
+    }
+    </style>
+
+</head>
+<body>
+<h1>AI Multilingual Symtom Checker</h1>
+    <div class="container">
+        
+        <div class="content">
+            <br><br>
+            <label>Enter your Disease : </label>
+            <input type="text" placeholder="Enter Disease Symptoms" style="border-radius: 10px">
+	    <button onclick="showText()">submit</button><br><br>
+         <textarea cols="15" rows="2" style="border-radius: 10px">Common Cold</textarea><br><br><br>
+            <textarea cols="100" rows="15" id="telugu"> Common Symptoms can be :
+    ->Runny or stuffy nose.
+    ->Sore or scratchy throat.
+    ->Cough.
+    ->Sneezing.
+    ->Generally feeling unwell.
+    ->Slight body aches or a mild headache.
+    ->Low-grade fever.
+
+Transmission :
+    The virus enters the body through the nose, mouth, or eyes. 
+    It spreads through:
+        ->Airborne droplets when an infected person coughs or sneezes.
+        ->Direct contact with an infected person.
+        ->Contaminated surfaces like doorknobs, utensils, or towels
+
+Precautions :
+    ->wash your hands frequently
+    ->Avoid Close Contact
+    ->Avoid touching your face
+    ->Cover your mouth and nose
+    ->Stay hydrate and rest
+</textarea><br><br>
+            <div class="buttons">
+                <button onclick="telugu()">తెలుగు</button>
+                <button>தமிழ்</button>
+                <button>हिन्दी</button>
+                <button>English</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

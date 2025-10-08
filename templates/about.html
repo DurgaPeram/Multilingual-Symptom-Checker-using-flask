@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about the Multilingual Symptom Checker, its purpose, and how it can assist you.">
+    <meta name="keywords" content="About, Multilingual Symptom Checker, Health, Diagnosis, Symptoms">
+    <title>About Us - Multilingual Symptom Checker</title>
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesAbout.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/icon.png') }}" alt="icon" class="rr">
+        <h1 style="text-align: center"><strong>About Multilingual Symptom Checker</strong></h1>
+        <p style="text-align: center"><i>Your guide to understanding symptoms in your preferred language.</i></p>
+        <img src="{{ url_for('static', filename='images/medical.jpg') }}" alt="medical" class="re">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="{{ url_for('scheams') }}">Government Schemes</a></li>
+            <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>The Multilingual Symptom Checker aims to provide accessible healthcare guidance to individuals worldwide. Our mission is to help users identify potential health issues based on their symptoms and receive preliminary health advice in their preferred language.</p>
+
+            <h2>How It Works</h2>
+            <p>By entering your symptoms, the system processes the information and suggests possible diagnoses. The platform supports multiple languages to ensure that users can understand their health status without language barriers.</p>
+
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Comprehensive Symptom Database: Our system is built on a wide-ranging database of symptoms and related diseases.</li>
+                <li>Multilingual Support: Users can access information in various languages, making healthcare information more inclusive.</li>
+                <li>User-Friendly Interface: The application is designed with simplicity and ease of use in mind, ensuring a smooth experience for all users.</li>
+            </ul>
+
+            <h2>Meet the Team</h2>
+            <p>Our dedicated team consists of healthcare professionals, software developers, and linguists, all working together to create a valuable resource for individuals seeking health guidance. We believe in the power of technology to enhance healthcare access and improve patient outcomes.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Health Management System</p>
+    </footer>
+
+</body>
+</html>

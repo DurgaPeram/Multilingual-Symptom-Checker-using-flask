@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 125px;
+    background-color: #2b88d8;
+    color: white;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+}
+.re {
+    width: 100px;
+    height: auto;
+    margin-left: 15px;
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    border-radius: 5%;
+}
+.rr {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+    position: absolute;
+    top: 33px;
+    left: 80px;
+    border-radius: 7%;
+}
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #023a5a;
+    color: white;
+    height: 40px;
+}
+
+nav ul
+{
+    display:block;
+    block-size: 30px;
+    font-size: 15px;
+    color: white;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+nav ul li:hover
+    {
+       background-color: #ce99ff;
+       background-size: 30px;
+       padding-top: 6px;
+    }
+nav ul li:active
+    {
+        background-color: #2b88d8;
+    }
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+}
+
+.slideshow {
+    flex: 1;
+    padding-left: 80px;
+}
+.slides {
+    position: relative;
+    width: 85%;
+    height: auto;
+    over
+}
+
+.slide {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: slideAnimation 27s infinite;
+}
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 8s; }
+.slide:nth-child(3) { animation-delay: 13s; }
+.slide:nth-child(4) { animation-delay: 18s; }
+.slide:nth-child(5) { animation-delay: 23s; }
+.slide:nth-child(6) { animation-delay: 28s; }
+/* Fade in and out */
+@keyframes slideAnimation {
+    0%, 57% {
+        opacity: 1; 
+    }
+    65%, 100% {
+        opacity: 0; 
+    }
+}
+
+.slide.active {
+    display: block; /* Show active slide */
+}
+
+.input-section, .language-section, .output-section {
+    flex: 2;
+    margin-left: 2rem;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2b88d8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #1d5e8c;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.output-section {
+    background-color: #e3f2fd;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+}
+#AS
+{
+    margin-bottom: 10px;
+}
+/* Add gap between inputs in the symptoms container */
+#symptoms-container input {
+    margin-bottom: 10px;
+}
+
+/* Add space between sections like input-section, language-section, and output-section */
+.input-section, .language-section, .output-section {
+    margin-bottom: 20px; /* Adjust the gap between sections */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2b88d8;
+    color: #fff;
+    margin-top: 2rem;
+}

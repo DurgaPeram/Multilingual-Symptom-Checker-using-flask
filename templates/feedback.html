@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Feedback page for the Multilingual Symptom Checker">
+    <meta name="keywords" content="Feedback, Health, Symptom Checker">
+    <title>Feedback - Multilingual Symptom Checker</title>
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesFeed.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/icon.png') }}" alt="icon" class="rr">
+        <h1>Feedback for Multilingual Symptom Checker</h1>
+        <p><i>Your opinions are valuable to us! Please share your thoughts.</i></p>
+        <img src="{{ url_for('static', filename='images/medical.jpg') }}" alt="medical" class="re">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('scheams') }}">Government Schemes</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="feedback-section">
+            <h2>We Value Your Feedback</h2>
+            <form id="feedback-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Feedback:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your feedback here..." required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <div id="feedback-response" style="margin-top: 20px;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Health Management System</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='scriptFeed.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+from flask import Flask, render_template, request, jsonify
+import pandas as pd
+
+app = Flask(_name_)
+print("Flask imported successfully!")
+
+# Load the disease dataset with symptoms and descriptions
+dataset = pd.read_csv('C:/Users/user/Desktop/MINOR 1/dataset.csv', on_bad_lines='skip')
+
+# Function to match symptoms and retrieve disease description in the selected language
+def find_disease_description(symptoms, language):
+    for _, row in dataset.iterrows():
+        # Filter by the selected language
+        if row['Language'] == language:
+            disease_symptoms = [row['Symptom1'], row['Symptom2'], row['Symptom3'], row['Symptom4']]
+            # Count matches between input symptoms and dataset symptoms
+            matches = sum(1 for symptom in symptoms if symptom in disease_symptoms)
+            
+            if matches >= 3:
+                disease_name = row['Disease']
+                description = row.get('Description', "Description not available.")
+                print(f"Matched Disease: {disease_name}, Description: {description}")
+                return disease_name, description
+    
+    # Return message if no matching disease is found
+    return None, "Sorry, I am unable to find the disease based on the given symptoms. Please consult a nearby doctor."
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/feedback')
+def feedback():
+    return render_template('feedback.html')
+
+@app.route('/help')
+def help():
+    return render_template('help.html')
+
+# API endpoint to handle symptom analysis
+@app.route('/analyze', methods=['POST'])
+def analyze_symptoms():
+    data = request.json
+    symptoms = data.get('symptoms', [])
+    language = data.get('language')
+    print(f"Received symptoms: {symptoms}, Language: {language}")
+
+    # Get disease and description based on symptoms and language
+    disease_name, description = find_disease_description(symptoms, language)
+
+    # Return the response in JSON format
+    response = {
+        "disease": disease_name or "Unknown",
+        "description": description,
+        "language": language
+    }
+    return jsonify(response)
+
+if _name_ == '_main_':
+    app.run(debug=True)

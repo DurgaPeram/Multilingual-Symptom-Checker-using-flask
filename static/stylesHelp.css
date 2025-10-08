@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 125px;
+    background-color: #2b88d8;
+    color: white;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+}
+.re {
+    width: 100px;
+    height: auto;
+    margin-left: 15px;
+    position: absolute;
+    top: 40px;
+    right: 70px;
+    border-radius: 5%;
+}
+.rr {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+    position: absolute;
+    top: 33px;
+    left: 80px;
+    border-radius: 7%;
+}
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #023a5a;
+    color: white;
+    height: 40px;
+}
+
+nav ul
+{
+    display:block;
+    block-size: 30px;
+    font-size: 15px;
+    color: white;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+nav ul li:hover
+    {
+       background-color: #ce99ff;
+       background-size: 30px;
+       padding-top: 6px;
+    }
+nav ul li:active
+    {
+        background-color: #2b88d8;
+    }
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+}
+.help-section {
+    max-width: 800px;
+    margin: 20px auto; /* Center the help section */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the help section */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.help-section h2 {
+    text-align: center; /* Center the heading */
+    color: #2b88d8; /* Use the primary color */
+}
+
+.help-section article {
+    margin-bottom: 20px; /* Space between articles */
+}
+
+.help-section h3 {
+    color: #023a5a; /* Dark blue for subheadings */
+}
+
+.help-section p {
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Dark gray text */
+}
+
+a {
+    color: #2b88d8; /* Primary color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2b88d8;
+    color: #fff;
+    margin-top: 2rem;
+}

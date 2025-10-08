@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get your disease diagnosis and its description based on your current symptoms and access the content in your own language">
+    <meta name="keywords" content="Symptoms, Disease, symptom cheker, multilingual symptom, multilingual symptom checker">
+    <title> Multilingual Symptom Checker </title>
+    <link rel="icon" type="image/jpg" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="icon.png" alt="icon" class="rr"> 
+        <h1 style="text-align: center"><strong>WELCOME TO MULTILINGUAL SYMPTOM CHECKER</strong></h1>
+        <p style="text-align: center"><i>Get Preliminary Health Guidance based on your Symptoms <br> in your preferd language.</i><p>
+        <img src="medical.jpg" alt="medical" class="re">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#govnt">Government Schemes</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#help">Help</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="slideshow">
+            <div class="slides">
+                <img src="image 1.jpg" alt="Health Tip 1" class="slide" />
+                <img src="image 2.jpg" alt="Health Tip 2" class="slide" />
+                <img src="image 3.jpg" alt="Health Tip 3" class="slide" />
+		        <img src="image 4.jpg" alt="Health Tip 3" class="slide" />
+		        <img src="Untitled-5.jpg" alt="Health Tip 3" class="slide" />
+		        <img src="image 6.jpg" alt="Health Tip 3" class="slide" />
+            </div>
+        </section>
+
+        <section class="input-section">
+            <label for="symptom">Enter your symptoms:</label>
+            <input type="text" id="symptom" placeholder="e.g., headache" onkeyup="showSuggestions(this.value)">
+            <div id="suggestions"></div>
+            <br>
+            <div id="symptoms-container"></div>
+            <button type="button" onclick="addSymptomInput()" id="AS">Add Another Symptom</button>
+            <br>
+            <br>
+            <button onclick="analyzeSymptoms()">Analyze Symptoms</button>
+            <p><i><strong>Come down for checking the result</strong></i></p>
+        </section>
+    </main>
+
+    <section class="language-section">
+        <label for="language">Select Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="te">Telugu</option>
+            <option value="te">Tamil</option>
+            <option value="hi">Hindi</option>
+        </select>
+    </section>
+    <br>
+
+    <section class="output-section" id="output">
+        <h2>Possible Diagnoses</h2>
+        <div id="diagnosis-list">
+            <p>Select symptoms to see your health guidance.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Health Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

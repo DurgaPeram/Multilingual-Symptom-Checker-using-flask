@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Help page for the Multilingual Symptom Checker">
+    <meta name="keywords" content="Help, Health, Symptom Checker, FAQs">
+    <title>Help - Multilingual Symptom Checker</title>
+    <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesHelp.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='images/icon.png') }}" alt="icon" class="rr">
+        <h1>Help & Support</h1>
+        <p><i>Need assistance? You've come to the right place!</i></p>
+        <img src="{{ url_for('static', filename='images/medical.jpg') }}" alt="medical" class="re">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('scheams') }}">Government Schemes</a></li>
+            <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+            <li><a href="#help">Help</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="help-section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <article>
+                <h3>How do I use the symptom checker?</h3>
+                <p>Simply enter your symptoms in the input box on the main page. You can add multiple symptoms by clicking "Add Another Symptom". After entering your symptoms, click the "Analyze Symptoms" button to get possible diagnoses and health guidance.</p>
+            </article>
+
+            <article>
+                <h3>What languages are available?</h3>
+                <p>The Multilingual Symptom Checker supports multiple languages, including English, Telugu, Tamil, and Hindi. You can select your preferred language from the dropdown menu.</p>
+            </article>
+
+            <article>
+                <h3>How can I interpret the results?</h3>
+                <p>The results will show possible diagnoses based on the symptoms you've entered. Please remember that this tool is meant for preliminary guidance and does not replace professional medical advice.</p>
+            </article>
+
+            <article>
+                <h3>Who can I contact for more help?</h3>
+                <p>If you have further questions or need assistance, please feel free to reach out via the <a href="#feedback">Feedback</a> section, and we will get back to you as soon as possible.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Health Management System</p>
+    </footer>
+
+</body>
+</html>
